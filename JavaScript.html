@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .message {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #ff7f7f;
+            color: white;
+        }
+        .no {
+            background-color: #ccc;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <p>Will you be my Valentine?</p>
+    </div>
+    <button class="button yes" onclick="handleResponse('yes')">Yes</button>
+    <button class="button no" onclick="handleResponse('no')">No</button>
+
+    <script>
+	let choice = 1
+        function handleResponse(response) {
+            const messageDiv = document.querySelector('.message');
+            if (response === 'yes' && choice == 1) {
+		choice = 0
+                messageDiv.innerHTML = "Can't wait to see you later 😘";
+		}
+            if (response === 'no' && choice == 1) {		
+		choice = 0
+                messageDiv.innerHTML = "That's okay, maybe next time!";
+            }
+        }
+    </script>
+</body>
+</html>
+ 
